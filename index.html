@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones JQuery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: silver
+        }
+        
+        h1 {
+            color: white;
+        }
+        
+        .card-body {
+            min-height: 300px;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-5">Funciones Jquery</h1>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Hide</h5>
+                        <p id="p-hide" class="card-text">haz click en el boton para esconder el párrafo usando hide.</p>
+                        <a href="#" id="btn-hide" class="btn btn-primary">Hide</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Show</h5>
+                        <p id="p-show" class="card-text" style="display: none;">haz click en el boton para mostrar el párrafo usando show.</p>
+                        <a href="#" id="btn-show" class="btn btn-primary">Show</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Toggle</h5>
+                        <p id="p-toggle" class="card-text">haz click en el boton para alternar el párrafo usando toggle.</p>
+                        <a href="#" id="btn-toggle" class="btn btn-primary">Toggle</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Slide Down</h5>
+                        <p id="p-slidedown" class="card-text" style="display: none;">haz click en el boton para mostrar el párrafo usando slideDown.</p>
+                        <a href="#" id="btn-slidedown" class="btn btn-primary">Slide Down</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 mt-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Slide Up</h5>
+                        <p id="p-slideup" class="card-text">haz click en el boton para esconder el párrafo usando slideUp.</p>
+                        <a href="#" id="btn-slideup" class="btn btn-primary">Slide Up</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 mt-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Slide Toggle</h5>
+                        <p id="p-slidetoggle" class="card-text">haz click en el boton para alternar el párrafo usando slideToggle.</p>
+                        <a href="#" id="btn-slidetoggle" class="btn btn-primary">Slide Toggle</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 mt-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Fade In</h5>
+                        <p id="p-fadein" class="card-text" style="display: none;">haz click en el boton para mostrar el párrafo usando fadeIn.</p>
+                        <a href="#" id="btn-fadein" class="btn btn-primary">Fade In</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 mt-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Fade Out</h5>
+                        <p id="p-fadeout" class="card-text">haz click en el boton para esconder el párrafo usando fadeOut.</p>
+                        <a href="#" id="btn-fadeout" class="btn btn-primary">Fade Out</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 mt-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">addClass</h5>
+                        <p id="p-addclass" class="card-text">haz click en el boton para añadir una clase <b>.hola</b> al párrafo usando <b>addClass</b></p>
+                        <a href="#" id="btn-addclass" class="btn btn-primary">addClass</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 mt-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">before</h5>
+                        <p id="p-before" class="card-text">haz click en el boton para añadir la palabra <b>antes</b> al inicio del párrafo usando <b>before</b></p>
+                        <a href="#" id="btn-before" class="btn btn-primary">before</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 mt-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">after</h5>
+                        <p id="p-after" class="card-text">haz click en el boton para añadir la palabra <b>despues</b> al final del párrafo usando <b>after</b></p>
+                        <a href="#" id="btn-after" class="btn btn-primary">after</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 mt-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">append</h5>
+                        <p id="p-append" class="card-text">haz click en el boton para añadir la palabra <b>despues</b> al final del párrafo usando <b>append</b></p>
+                        <a href="#" id="btn-append" class="btn btn-primary">append</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 mt-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">html</h5>
+                        <p id="p-html" class="card-text">haz click en el boton para <b>devolver</b> el contenido del párrafo incluyendo etiquetas <b>html</b></p>
+                        <a href="#" id="btn-html" class="btn btn-primary">Show html</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 mt-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">attr</h5>
+                        <p id="p-attr" class="card-text">haz click en el boton para obtener el valor del <b>atributo</b> clase del párrafo</p>
+                        <a href="#" id="btn-attr" class="btn btn-primary">Show attr</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 mt-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">val</h5>
+                        <p id="p-val" class="card-text">
+                            haz click en el boton para obtener el valor ingresado en el input de formulario de clase val <br> Name: <input type="text" id="val" value="Mickey Mouse"></p>
+                        <a href="#" id="btn-val" class="btn btn-primary">Show val</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 mt-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">text</h5>
+                        <p id="p-text" class="card-text">haz click en el boton para obtenner el <b>texto</b> del párrafo </p>
+                        <a href="#" id="btn-text" class="btn btn-primary">Show text</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            // 1. Hide
+            $('#btn-hide').on('click', function() {
+                    $('#p-hide').hide()
+                })
+                // 2. Show
+            $('#btn-show').on('click', function() {
+                    $('#p-show').show()
+                })
+                // 3. Toggle
+            $('#btn-toggle').on('click', function() {
+                    $('#p-toggle').toggle()
+                })
+                // 4. SlideDown
+            $('#btn-slidedown').on('click', function() {
+                    $('#p-slidedown').slideDown()
+                })
+                // 5. slideUp
+            $('#btn-slideup').on('click', function() {
+                    $('#p-slideup').slideUp()
+                })
+                // 5. slideToggle
+            $('#btn-slidetoggle').on('click', function() {
+                    $('#p-slidetoggle').slideToggle()
+                })
+                // 6. fadeIn
+            $('#btn-fadein').on('click', function() {
+                    $('#p-fadein').fadeIn();
+                })
+                // 7. fadeOut
+            $('#btn-fadeout').on('click', function() {
+                    $('#p-fadeout').fadeOut();
+                })
+                // 8. addClass
+            $('#btn-addclass').on('click', function() {
+                    $('#p-addclass').addClass('hola');
+                    alert('clase añadida!');
+                })
+                // 9. before
+            $('#btn-before').on('click', function() {
+                    $('#p-before').before('antes ');
+                })
+                // 10. after
+            $('#btn-after').on('click', function() {
+                    $('#p-after').after('despues ');
+                })
+                // 11. append
+            $('#btn-append').on('click', function() {
+                    $('#p-append').append('despues ');
+                })
+                // 12. html
+            $('#btn-html').on('click', function() {
+                    alert('HTML: ' + $('#p-html').html());
+                })
+                // 13. attr
+            $('#btn-attr').on('click', function() {
+                    alert('attr: ' + $('#p-attr').attr('class'));
+                })
+                // 14. val
+            $('#btn-val').click(function() {
+                alert("Value: " + $("#val").val());
+            });
+            // 15. text
+            $('#btn-text').click(function() {
+                alert("text: " + $("#p-text").text());
+            });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        });
+    </script>
+</body>
+
+</html>
